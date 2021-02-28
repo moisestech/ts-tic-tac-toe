@@ -20,7 +20,7 @@ let currentMove = "X";
 
 // a function that creates each of these cells
 // takes in the row and the collumn which the cell is positined in and the content of the cell
-function createCell(row, col, content = "") {
+function createCell(row: number, col: number, content = "") {
   const cell = document.createElement("button");
   cell.setAttribute("data-row", row.toString());
   cell.setAttribute("data-col", col.toString());
