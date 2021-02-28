@@ -16,7 +16,7 @@ let boardState = [
 ];
 
 // another variable determining who's turn it is
-let currentMove = "X";
+let currentMove: "X" | "O" = "X";
 
 // a function that creates each of these cells
 // takes in the row and the collumn which the cell is positined in and the content of the cell
