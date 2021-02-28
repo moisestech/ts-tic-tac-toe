@@ -8,6 +8,9 @@ const boardElement = document.getElementById("board");
 const ROW_COUNT = 3;
 const COL_COUNT = 3;
 
+// we want to make it so the cells in the boardState can only be X or O or blank
+type Cell = "X" | "0" | ""
+
 // we have a boardState variable which holds wether there is an X or an O in each of the Cells 
 let boardState = [
   ["", "", ""],
