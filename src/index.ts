@@ -42,6 +42,9 @@ function createCell(row: number, col: number, content: Cell = "") {
   cell.classList.add("cell");
 
   cell.addEventListener("click", () => {
+    // going to pass if the value is not empty
+    if (winner) return;
+    
     if (boardState[row][col] === "") {
       boardState[row][col] = currentMove;
       currentMove = currentMove === "X" ? "O" : "X"
