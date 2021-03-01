@@ -110,6 +110,20 @@ const victories: Victory[] = [
 ];
 
 function checkBoard(): Cell | "Draw" {
+  // loop to check if victory conditions have been met
+  for(let victory of victories) {
+
+    // using index access to get the boardState item 
+    const cell1 = boardState[victory[0][0]][victory[0][1]];
+    const cell2 = boardState[victory[1][0]][victory[1][1]];
+    const cell3 = boardState[victory[2][0]][victory[2][1]];
+
+    // check to see if all the Cells are exactly the same and are not blank
+    if (cell1 !== "" && cell1 === cell2 && cell1 == cell3) {
+      return cell1; 
+    }
+  }
+
   // check draw first
   let isDraw = true;
   for (let i = 0; i < ROW_COUNT; i++) {
