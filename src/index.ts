@@ -9,7 +9,7 @@ const ROW_COUNT = 3;
 const COL_COUNT = 3;
 
 // we want to make it so the cells in the boardState can only be X or O or blank
-type Cell = "X" | "0" | ""
+type Cell = "X" | "O" | ""
 
 
 // we want to make it so that we can only have a 3 x 3 grid of cells
@@ -29,6 +29,9 @@ let boardState: TicTacToeBoard = [
 // another variable determining who's turn it is
 let currentMove: "X" | "O" = "X";
 
+// keep track of winner state in a Union type
+let winner: Cell | "Draw" = ""
+
 // a function that creates each of these cells
 // takes in the row and the collumn which the cell is positined in and the content of the cell
 function createCell(row: number, col: number, content: Cell = "") {
@@ -37,6 +40,13 @@ function createCell(row: number, col: number, content: Cell = "") {
   cell.setAttribute("data-col", col.toString());
   cell.setAttribute("data-content", content);
   cell.classList.add("cell");
+
+  cell.addEventListener("click", () => {
+    if (boardState[row][col] === "") {
+      boardState[row][col] = currentMove;
+      currentMove = currentMove === "X" ? "O" : "X"
+    }
+  })
 
   // return the cell is attributes so that we can use it in the renderBoard function
   return cell;
