@@ -160,7 +160,7 @@ function renderBoard() {
 
   const moveElement = document.createElement("p");
   moveElement.id = "move-element";
-  moveElement.innerText = `Next Move: ${currentMove}`;
+  moveElement.innerText = winner ? `Winner: ${winner}`: `Next Move: ${currentMove}`;
   moveElement.classList.add("current-move");
   appElement.insertBefore(moveElement, document.getElementById("reset"));
 }
@@ -177,6 +177,7 @@ function init() {
     ];
 
     currentMove = "X";
+    winner = "";
     renderBoard();
   });
 
