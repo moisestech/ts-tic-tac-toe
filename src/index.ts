@@ -20,7 +20,7 @@ type TicTacToeBoard = [
 ];
 
 // we have a boardState variable which holds wether there is an X or an O in each of the Cells 
-let boardState = [
+let boardState: TicTacToeBoard = [
   ["", "", ""],
   ["", "", ""],
   ["", "", ""]
@@ -31,7 +31,7 @@ let currentMove: "X" | "O" = "X";
 
 // a function that creates each of these cells
 // takes in the row and the collumn which the cell is positined in and the content of the cell
-function createCell(row: number, col: number, content = "") {
+function createCell(row: number, col: number, content: Cell = "") {
   const cell = document.createElement("button");
   cell.setAttribute("data-row", row.toString());
   cell.setAttribute("data-col", col.toString());
