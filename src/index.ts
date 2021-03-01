@@ -44,15 +44,34 @@ function createCell(row: number, col: number, content: Cell = "") {
   cell.addEventListener("click", () => {
     // going to pass if the value is not empty
     if (winner) return;
-    
+
     if (boardState[row][col] === "") {
       boardState[row][col] = currentMove;
       currentMove = currentMove === "X" ? "O" : "X"
+      
+      // check the board after every move and return the typeof winner
+      winner = checkBoard();
     }
   })
 
   // return the cell is attributes so that we can use it in the renderBoard function
   return cell;
+}
+
+function checkBoard(): Cell | "Draw" {
+  // check draw first
+  let isDraw = true;
+  for (let i = 0; i < ROW_COUNT; i++) {
+    for (let j = 0; i < COL_COUNT; j++) {
+      if (boardState[i][j] === "") isDraw = false {
+
+      }
+    }
+  }
+  if (isDraw) return "Draw"
+
+  // if returned there isn't a winner and the game is still in progress
+  return "";
 }
 
 function renderBoard() {
