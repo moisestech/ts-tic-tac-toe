@@ -12,6 +12,7 @@ const COL_COUNT = 3;
 type Cell = "X" | "0" | ""
 
 // we have a boardState variable which holds wether there is an X or an O in each of the Cells 
+// we want to make it so that we can only have a 3 x 3 grid of cells
 let boardState = [
   ["", "", ""],
   ["", "", ""],
