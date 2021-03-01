@@ -58,6 +58,57 @@ function createCell(row: number, col: number, content: Cell = "") {
   return cell;
 }
 
+// to check winner we create an array of all possible win conditions
+// each array has an array of cells represented by their coordinate
+type Coordinate = [number, number];
+type Victory = [Coordinate, Coordinate, Coordinate];
+
+// we can now create an array of Victory types
+//check three of the cells based on an array of victory conditions
+// if all the cells are the same value X or O
+const victories: Victory[] = [
+  [
+    [0, 0],
+    [0, 1],
+    [0, 2],
+  ],
+  [
+    [1, 0],
+    [1, 1],
+    [1, 2],
+  ],
+  [
+    [2, 0],
+    [2, 1],
+    [2, 2],
+  ],
+  [
+    [0, 0],
+    [1, 0],
+    [2, 0],
+  ],
+  [
+    [0, 1],
+    [1, 1],
+    [2, 1],
+  ],
+  [
+    [0, 2],
+    [1, 2],
+    [2, 2],
+  ],
+  [
+    [0, 0],
+    [1, 1],
+    [2, 2],
+  ],
+  [
+    [0, 2],
+    [1, 1],
+    [2, 0],
+  ],
+];
+
 function checkBoard(): Cell | "Draw" {
   // check draw first
   let isDraw = true;
