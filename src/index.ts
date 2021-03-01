@@ -11,8 +11,15 @@ const COL_COUNT = 3;
 // we want to make it so the cells in the boardState can only be X or O or blank
 type Cell = "X" | "0" | ""
 
-// we have a boardState variable which holds wether there is an X or an O in each of the Cells 
+
 // we want to make it so that we can only have a 3 x 3 grid of cells
+type TicTacToeBoard = [
+  [Cell, Cell, Cell],
+  [Cell, Cell, Cell],
+  [Cell, Cell, Cell]
+];
+
+// we have a boardState variable which holds wether there is an X or an O in each of the Cells 
 let boardState = [
   ["", "", ""],
   ["", "", ""],
@@ -84,4 +91,4 @@ function init() {
 init();
 
 // https://codesandbox.io/s/github/uidotdev/typescript-tic-tac-toe
-// https://platform.ui.dev/courses/1207737/lectures/26978324
+// https://platform.ui.dev/courses/1207737/lectures/26978325
