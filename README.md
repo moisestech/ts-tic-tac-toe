@@ -1,8 +1,55 @@
 # Typescript Tic-Tac-Toe
 
-## Project
+## **Vanilla Javascript TypeScript Tic-Tac-Toe!**
 
 This project is a "Tic Tac Toe" app. You'll be able to play tic tac toe against yourself and have all of your code type checked by the TypeScript compiler.
+
+## ⚙ Features
+
+- [TypeScript]()
+- [ES8](https://www.w3schools.com/js/js_2018.asp)
+
+## 👁️‍🗨️ Project Preview
+
+Coming Soon!
+
+## 🚀 Start
+
+To start app: `npm start`
+
+## 📚 HOW-TO
+
+For additional info click [here]()
+
+## 🗺 URL Tree
+
+```bash
+├── /                          #Home
+```
+
+## 🌿 App tree
+
+```bash
+├── HOWTO.md
+├── LICENSE
+├── README.md
+├── package.json
+├── public
+│   ├── _redirects
+│   ├── assets
+│   ├── favicon.ico
+│   └── index.html
+├── src
+│   └── index.js
+└── webpack.config.js
+```
+
+## ⛰️ Roadmap
+
+1. Migrate to React
+2. Make Mobile Friendly
+3. Write Tests
+4. [Migrate to use AI opponent](https://www.youtube.com/watch?v=trKjYdBASyQ)
 
 ## To-Do's
 
